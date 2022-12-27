@@ -14,6 +14,11 @@ STRING_SESSION3 = getenv("STRING_SESSION3", "")
 STRING_SESSION4 = getenv("STRING_SESSION4", "")
 
 # other vars
-DB_URL = getenv("DB_URL", "")
+DB_URL = getenv("DB_URL", "") # using postgressql
 UBOT_LOG = int(getenv("UBOT_LOG") or 0)
 SUDO_USERS = list(map(int, getenv("SUDO_USERS", "").split(", ")))
+
+
+# Heroku Vars
+HEROKU_API_KEY = getenv("HEROKU_API_KEY", "")
+HEROKU_APP_NAME = getenv("HEROKU_APP_NAME", "")
