@@ -1,0 +1,27 @@
+APScheduler==3.7.0
+aiohttp
+asyncio
+bs4
+gitpython
+googlesearch-python== 1.0.1
+gpytranslate
+gtts
+heroku3
+lottie
+opencv-python-headless
+Pillow
+prettytable
+psycopg2-binary
+pymediainfo
+pyrogram
+pytgcalls==3.0.0.dev22
+python-dotenv
+requests
+speedtest-cli==2.1.3
+sqlalchemy==1.3.23
+telegraph
+tgcrypto
+tracemoepy
+urllib3
+uvloop
+youtube-search-python
