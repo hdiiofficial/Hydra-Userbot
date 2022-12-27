@@ -40,6 +40,16 @@
          "description": "Pyrogram Based String Session (2nd ID) [ From https://repl.it/@SpEcHiDe/GenerateStringSession ]",
          "required": true,
          "value": ""
+      },
+       "HEROKU_API_KEY": {
+         "description": "Your Heroku API_KEY",
+         "required": true,
+         "value": ""
+      },
+       "HEROKU_APP_NAME: {
+         "description": "Your Heroku APP_NAME",
+         "required": true,
+         "value": ""
       }
       
    }
