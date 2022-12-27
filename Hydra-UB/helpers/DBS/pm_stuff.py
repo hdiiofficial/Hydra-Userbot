@@ -5,7 +5,7 @@ except ImportError:
 from sqlalchemy import Column
 from sqlalchemy.sql.sqltypes import BigInteger
 
-from config import PM_LIMIT
+PM_LIMIT = 9
 
 warns = PM_LIMIT  # max number of warning for a user
 
