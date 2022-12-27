@@ -152,7 +152,7 @@ ubots = [ubot for ubot in [ubot1, ubot2, ubot3, ubot4, ubot5] if ubot]
 
 for ubot in ubots:
     if not hasattr(ubot, "group_call"):
-        setattr(ubot, "group_call", GroupCallFactory(bot).get_group_call())
+        setattr(ubot, "group_call", GroupCallFactory(ubot).get_group_call())
 
 
 # Credits: @mrismanaziz
