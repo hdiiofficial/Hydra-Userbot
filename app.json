@@ -46,7 +46,7 @@
          "required": true,
          "value": ""
       },
-       "HEROKU_APP_NAME: {
+       "HEROKU_APP_NAME": {
          "description": "Your Heroku APP_NAME",
          "required": true,
          "value": ""
