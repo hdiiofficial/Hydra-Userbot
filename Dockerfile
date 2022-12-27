@@ -14,4 +14,4 @@ RUN pip3 install -U -r requirements.txt
 
 COPY . .
 
-CMD [ "python3", "-m" , "Hydra"]
+CMD [ "python3", "-m" , "Hydra-UB"]
