@@ -52,7 +52,7 @@ async def main():
         except Exception as a:
             LOGGER("main").warning(a)
     LOGGER("Hydra-UB").info(f"Hydra-UserBot v{BOT_VER} [🔥 ACTIVED! 🔥]")
-    if ubot1 and not str(BOTLOG_CHATID).startswith("-100"):
+    if ubot1 and not str(UBOT_LOG).startswith("-100"):
         await create_botlog(ubot1)
     await idle()
     await aiosession.close()
