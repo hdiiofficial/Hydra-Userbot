@@ -4,7 +4,7 @@ from sqlalchemy import create_engine
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import scoped_session, sessionmaker
 
-from Hydra-UB import DB_URL, LOGGER
+from HydraUB import DB_URL, LOGGER
 
 SPAMBOT = "SPAMBOT"
 
