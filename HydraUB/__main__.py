@@ -33,7 +33,7 @@ MSG_ON = """
 
 async def main():
     for all_module in ALL_MODULES:
-        importlib.import_module(f"Hydra-UB.plugins.{all_module}")
+        importlib.import_module(f"HydraUB.plugins.{all_module}")
     for ubot in ubots:
         try:
             await ubot.start()
