@@ -11,7 +11,7 @@ from pyrogram import filters
 from pyrogram.types import Message
 from HydraUB.helpers.basic import edit_or_reply
 
-from .help import add_command_help
+from .helpers import add_command_help
 
 async def aexec(code, client, message):
     exec(
