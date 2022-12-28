@@ -7,7 +7,7 @@ from inspect import getfullargspec
 from io import StringIO
 from time import time
 from config import CMD_HANDLER as cmd
-from pyrogram import filters
+from pyrogram import Client, filters
 from pyrogram.types import Message
 from HydraUB.helpers.basic import edit_or_reply, add_command_help
 
