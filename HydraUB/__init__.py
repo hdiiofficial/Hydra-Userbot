@@ -94,7 +94,7 @@ ubot1 = (
         api_id=API_ID,
         api_hash=API_HASH,
         session_string=STRING_SESSION,
-        plugins=dict(root="Hydra-UB/plugins"),
+        plugins=dict(root="HydraUB/plugins"),
     )
     if STRING_SESSION
     else None
@@ -106,7 +106,7 @@ ubot2 = (
         api_id=API_ID,
         api_hash=API_HASH,
         session_string=STRING_SESSION1,
-        plugins=dict(root="Hydra-UB/plugins"),
+        plugins=dict(root="HydraUB/plugins"),
     )
     if STRING_SESSION1
     else None
@@ -118,7 +118,7 @@ ubot3 = (
         api_id=API_ID,
         api_hash=API_HASH,
         session_string=STRING_SESSION2,
-        plugins=dict(root="Hydra-UB/plugins"),
+        plugins=dict(root="HydraUB/plugins"),
     )
     if STRING_SESSION2
     else None
@@ -130,7 +130,7 @@ ubot4 = (
         api_id=API_ID,
         api_hash=API_HASH,
         session_string=STRING_SESSION3,
-        plugins=dict(root="Hydra-UB/plugins"),
+        plugins=dict(root="HydraUB/plugins"),
     )
     if STRING_SESSION3
     else None
@@ -142,7 +142,7 @@ ubot5 = (
         api_id=API_ID,
         api_hash=API_HASH,
         session_string=STRING_SESSION4,
-        plugins=dict(root="Hydra-UB/plugins"),
+        plugins=dict(root="HydraUB/plugins"),
     )
     if STRING_SESSION4
     else None
