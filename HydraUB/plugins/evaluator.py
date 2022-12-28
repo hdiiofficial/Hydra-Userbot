@@ -12,7 +12,7 @@ from pyrogram.types import Message
 from HydraUB.helpers.basic import edit_or_reply, add_command_help
 
 
-async def aexec(code, client, message):
+async def aexec(code, client: Client, message: Message):
     exec(
         "async def __aexec(client, message): "
         + "".join(f"\n {a}" for a in code.split("\n"))
