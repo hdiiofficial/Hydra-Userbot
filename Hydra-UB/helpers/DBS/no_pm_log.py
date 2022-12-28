@@ -1,7 +1,7 @@
 from sqlalchemy import Column, Numeric
 
 try:
-    from Hydra-UB.helpers.DBS import BASE, SESSION
+    from HydraUB.helpers.DBS import BASE, SESSION
 except ImportError:
     raise AttributeError
 
