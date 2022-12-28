@@ -1,6 +1,6 @@
 from sqlalchemy import Boolean, Column, String, UnicodeText
 
-from Hydra-UB.helpers.DBS import BASE, SESSION
+from HydraUB.helpers.DBS import BASE, SESSION
 
 Owner = 0
 
