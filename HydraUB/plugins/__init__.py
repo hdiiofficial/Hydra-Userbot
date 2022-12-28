@@ -4,7 +4,7 @@ from os.path import basename, dirname, isfile
 from config import *
 from HydraUB import *
 from HydraUB.helpers import *
-from HydraUB.helpers.SQL import *
+from HydraUB.helpers.DBS import *
 from HydraUB.resources import *
 from HydraUB.utils import *
 
