@@ -16,7 +16,7 @@ STRING_SESSION4 = getenv("STRING_SESSION4", "")
 # other vars
 DB_URL = getenv("DB_URL", "") # using postgressql
 UBOT_LOG = int(getenv("UBOT_LOG") or 0)
-SUDO_USERS = list(map(int, getenv("SUDO_USERS", "").split(", ")))
+SUDO_USERS = getenv("SUDO_USERS", "")
 CMD_HANDLER = getenv("CMD_HANDLER", ".")
 
 # Heroku Vars
