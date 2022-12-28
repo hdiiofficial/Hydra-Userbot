@@ -9,9 +9,8 @@ from time import time
 from config import CMD_HANDLER as cmd
 from pyrogram import filters
 from pyrogram.types import Message
-from HydraUB.helpers.basic import edit_or_reply
+from HydraUB.helpers.basic import edit_or_reply, add_command_help
 
-from .helpers import add_command_help
 
 async def aexec(code, client, message):
     exec(
