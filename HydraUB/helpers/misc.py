@@ -9,7 +9,7 @@ from git import Repo
 from git.exc import GitCommandError, InvalidGitRepositoryError
 
 from config import HEROKU_API_KEY, HEROKU_APP_NAME
-from Hydra-UB import LOGGER
+from HydraUB import LOGGER
 
 HAPP = None
 
