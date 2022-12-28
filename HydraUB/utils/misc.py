@@ -9,7 +9,7 @@ admins_in_chat = {}
 
 
 def restart():
-    os.execvp(sys.executable, [sys.executable, "-m", "Hydra-UB"])
+    os.execvp(sys.executable, [sys.executable, "-m", "HydraUB"])
 
 
 async def list_admins(client: Client, chat_id: int):
