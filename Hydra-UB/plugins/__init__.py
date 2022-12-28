@@ -2,11 +2,11 @@ import glob
 from os.path import basename, dirname, isfile
 
 from config import *
-from Hydra-UB import *
-from Hydra-UB.helpers import *
-from Hydra-UB.helpers.SQL import *
-from Hydra-UB.resources import *
-from Hydra-UB.utils import *
+from HydraUB import *
+from HydraUB.helpers import *
+from HydraUB.helpers.SQL import *
+from HydraUB.resources import *
+from HydraUB.utils import *
 
 
 def __list_all_modules():
