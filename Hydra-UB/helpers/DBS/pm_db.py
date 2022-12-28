@@ -2,7 +2,7 @@ import threading
 
 from sqlalchemy import Column, String
 
-from Hydra-UB.helpers.DBS import BASE, SESSION
+from HydraUB.helpers.DBS import BASE, SESSION
 
 # class set_req
 # class get_req
