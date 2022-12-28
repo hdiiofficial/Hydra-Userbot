@@ -3,7 +3,7 @@ import importlib
 from pyrogram import idle
 from uvloop import install
 
-from Hydra-UB import (
+from HydraUB import (
     LOGGER,
     LOOP,
     UBOT_LOG,
@@ -12,12 +12,12 @@ from Hydra-UB import (
     ubots
 )
 
-from Hydra-UB.helpers.misc import (
+from HydraUB.helpers.misc import (
     create_botlog,
     heroku
 )
 
-from Hydra-UB.plugins import ALL_MODULES
+from HydraUB.plugins import ALL_MODULES
 
 BOT_VER = "main@0.0.1" 
 CMD_HANDLER = "."
